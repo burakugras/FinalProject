@@ -9,10 +9,9 @@ namespace Core.Utilities.Results
     public class Result : IResult
     {
         //readonly'ler constructor'da set edilebilir.
-        public Result(bool success,string message)
+        public Result(bool success,string message):this(success)
         {
             Message = message;
-            Success = success;
         }
         public Result(bool success)
         {
