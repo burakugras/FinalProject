@@ -27,7 +27,7 @@ internal class Program
 
         foreach (var product in productManager.GetProductDetails())
         {
-            Console.WriteLine(product.ProductName + " / " + product.CategoryName);
+            Console.WriteLine(product.ProductName + " / " + product.CategoryName+ " / "+ product.UnitsInStock);
         }
     }
 }
