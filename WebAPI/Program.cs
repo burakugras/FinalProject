@@ -1,13 +1,9 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Business.Abstract;
-using Business.Concrete;
 using Business.DependencyResolvers.Autofac;
-using DataAccess.Abstract;
-using DataAccess.Concrete.EntityFramework;
 
 var builder = WebApplication.CreateBuilder(args);
-//-------------------------.NET IoC Container yerine baka bir IoC Container kullanma
+//-------------------------.NET IoC Container yerine baþka bir IoC Container kullanma
 builder.Host
     .UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>(builder =>
