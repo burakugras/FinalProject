@@ -17,7 +17,7 @@ namespace Business.Concrete
         {
             _productDal = productDal;
         }
-
+        //[SecuredOperation("product.add")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
