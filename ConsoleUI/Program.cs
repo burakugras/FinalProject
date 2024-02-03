@@ -8,10 +8,11 @@ internal class Program
     {
         //DTO : Data Transformation Object
 
-        ProductTest();
+        //ProductTest();
         //CategoryTest();
     }
-
+    
+    /*
     private static void CategoryTest()
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
@@ -37,4 +38,6 @@ internal class Program
             Console.WriteLine(result.Message);
         }
     }
+    */
+    
 }
