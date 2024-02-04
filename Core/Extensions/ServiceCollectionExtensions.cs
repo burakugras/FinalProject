@@ -11,6 +11,7 @@ namespace Core.Extensions
 {
     public static class ServiceCollectionExtensions
     {
+        //burada this neyi genişletmek istediğimizi belirtmek için kullanılmıştır
         public static IServiceCollection AddDependencyResolvers(this IServiceCollection serviceCollection, ICoreModule[] modules)
         {
             foreach (var module in modules)

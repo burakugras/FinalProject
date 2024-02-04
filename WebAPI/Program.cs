@@ -9,6 +9,7 @@ using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Core.Utilities.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 //-------------------------.NET IoC Container yerine baþka bir IoC Container kullanma
@@ -44,7 +45,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
         };
     });
-builder.Services.AddDependencyResolvers(new Core.Utilities.IoC.ICoreModule[] {new CoreModule()});
+builder.Services.AddDependencyResolvers(new ICoreModule[] {new CoreModule()});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
